@@ -19,7 +19,7 @@ function getOne (id) {
   return response
 }
 
-function addSnack (id=uuidv4(), name="corn dogs") {
+function addSnack (id, name) {
   const errors = []
 
   let response = undefined
