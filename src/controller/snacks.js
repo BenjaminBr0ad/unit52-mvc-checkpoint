@@ -39,7 +39,7 @@ function deleteSnack (req, res, next) {
   if (deletedSnack.errors) {
     return next({ status: 404, message: `Could not delete snack`, error: deletedSnack.errors })
   }
-  res.status(204).json({ deletedSnack: deletedSnack})
+  res.status(204).json({ deletedSnack })
 }
 
 module.exports = {
