@@ -1,5 +1,4 @@
-const uuid = require('uuid/v4')
-const model = [
+[
   {
     "name": "chips",
     "id": "d32336ad-a734-4d32-8732-21543a18dfbc"
@@ -17,31 +16,3 @@ const model = [
     "id": "d7be703f-ae4d-4f9e-be5f-ad0fa2a64ba2"
   }
 ]
-
-function getAll () {
-
-}
-
-function getOne (id) {
-
-}
-
-function addSnack (id, name) {
-
-}
-
-function updateSnack (id, name) {
-
-}
-
-function deleteSnack (id) {
-
-}
-
-module.exports = {
-  getAll,
-  getOne,
-  addSnack,
-  updateSnack,
-  deleteSnack
-}
