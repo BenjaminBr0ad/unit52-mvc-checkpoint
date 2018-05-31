@@ -29,12 +29,10 @@ function addSnack (id, name) {
       response = { errors }
     }
   }
-  if (response === undefined) {
-    const newSnack = { name: name, id: id }
-    model.push(newSnack)
-    response = newSnack
-    return response
-  }
+  const newSnack = { name: name, id: id }
+  model.push(newSnack)
+  response = newSnack
+  return response
 }
 
 function updateSnack (id, name) {
