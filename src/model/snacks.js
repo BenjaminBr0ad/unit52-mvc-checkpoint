@@ -1,5 +1,5 @@
 const uuid = require('uuid/v4')
-const model = require('./snacks.json')
+const model = require('./snacksjson.js')
 
 function getAll () {
   return model
