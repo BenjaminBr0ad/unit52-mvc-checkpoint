@@ -1,5 +1,7 @@
 const uuid = require('uuid/v4')
-const model = [
+const model = require('./snacks.json')
+
+[
   {
     "name": "chips",
     "id": "d32336ad-a734-4d32-8732-21543a18dfbc"
