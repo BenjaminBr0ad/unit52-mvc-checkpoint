@@ -1,0 +1,25 @@
+{
+  "name": "unit52-mvc-checkpoint",
+  "version": "1.0.0",
+  "description": "MVC - API from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenjaminBr0ad/unit52-mvc-checkpoint.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenjaminBr0ad/unit52-mvc-checkpoint/issues"
+  },
+  "homepage": "https://github.com/BenjaminBr0ad/unit52-mvc-checkpoint#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "uuid": "^3.2.1"
+  }
+}
