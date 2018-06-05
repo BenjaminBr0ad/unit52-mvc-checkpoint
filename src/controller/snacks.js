@@ -15,7 +15,7 @@ function getOne (req, res, next) {
 }
 
 function addSnack (req, res, next) {
-  const newSnack = model.addSnack(uuidv4(), "corn dogs")
+  const newSnack = model.addSnack('b373072c-80df-4fae-8cfd-e8cfb07a0498', "corn dogs")
 
   if (newSnack.errors) {
     return next({ status: 400, message: `Could not create new snack`, error: snack.errors })
