@@ -22,19 +22,20 @@ function getOne (id) {
 function addSnack (id, name) {
   const errors = []
 
-  let response = undefined
-  for (let elem of model) {
-    if (elem.id === id) {
+  let response
+  const snack = model.find(snack => snack.id === id)
+  if (!id || !name) {
+    errors.push(`Please include both a name and an id`)
+    response = { errors }
+  } else if (snack) {
       errors.push(`A snack with that id already exists`)
       response = { errors }
-    }
-  }
-  if (response === undefined) {
-    const newSnack = { name: name, id: id }
+  } else {
+    const newSnack = {id, name}
     model.push(newSnack)
     response = newSnack
-    return response
   }
+  return response
 }
 
 function updateSnack (id, name) {
@@ -66,11 +67,11 @@ function deleteSnack (id) {
   } else {
     const index = model.indexOf(snack)
     model.splice(index, 1)
-    response = { model }
+    response = `${snack.name} deleted from database`
   }
   return response
 }
-//
+
 module.exports = {
   getAll,
   getOne,

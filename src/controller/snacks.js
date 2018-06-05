@@ -18,7 +18,7 @@ function addSnack (req, res, next) {
   const newSnack = model.addSnack(req.body.id, req.body.name)
 
   if (newSnack.errors) {
-    return next({ status: 400, message: `Could not create new snack`, error: snack.errors })
+    return next({ status: 400, message: `Could not create new snack`, error: newSnack.errors })
   }
   res.status(201).json({ newSnack: newSnack})
 }
@@ -39,7 +39,7 @@ function deleteSnack (req, res, next) {
   if (deletedSnack.errors) {
     return next({ status: 404, message: `Could not delete snack`, error: deletedSnack.errors })
   }
-  res.status(204).json({ deletedSnack })
+  res.status(200).json({ deletedSnack })
 }
 
 module.exports = {
