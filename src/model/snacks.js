@@ -66,7 +66,7 @@ function deleteSnack (id) {
   } else {
     const index = model.indexOf(snack)
     model.splice(index, 1)
-    response = model
+    response = { model }
   }
   return response
 }
